@@ -2,4 +2,138 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: helvetica, sans-serif;
+}
+
+main h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+main {
+  position: relative;
+  top: 4rem;
+}
+
+/*header*/
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  background-color: white;
+  z-index: 2;
+  width: 100%;
+}
+
+#logo img {
+  height: 4rem;
+}
+
+#name {
+  display:flex;
+  align-items: center;
+}
+
+#name h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+#main-heading {
+  display: inline-flex;
+  margin-left: 1.5rem;
+}
+
+span {
+  color: #c4c4c4;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: auto 0;
+}
+
+ul li {
+  display: inline-flex;
+  margin-left: 1rem;
+}
+
+ul li:first-child {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+/*introduction*/
+
+
+
+
+#introduction {
+  background-color: #c4c4c4;
+  padding: 0 1.5rem;
+}
+
+#introduction .container {
+  display: flex;
+}
+
+#introduction img {
+  max-width: 50%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#introduction .headings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #444;
+  width: 40%;
+  padding: 1.5rem;
+}
+
+#introduction .headings h1, #introduction .headings p{
+  margin: 1rem 3rem;
+}
+
+#introduction .headings p {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+
+#introduction .headings .button {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem 12rem;
+  font-size: 1.5rem;
+  margin: 2rem 3rem;
+}
+
+#introduction .headings .button a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/*thesis exhibit*/
+
+#thesis-exhibit .container .left video {
+  width: 60%;
 }
