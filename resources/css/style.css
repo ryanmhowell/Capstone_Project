@@ -15,8 +15,13 @@ main {
   top: 4rem;
 }
 
+#header-images {
+  display:none;
+}
 
-
+#courses-section #course-buttons {
+  display: none;
+}
 
 /*header*/
 
@@ -71,6 +76,7 @@ nav ul {
 ul li {
   display: inline-flex;
   padding: 1rem 0.5rem;
+  transition: background-color 0.25s ease-in 0s;
 }
 
 ul li:hover {
@@ -98,16 +104,15 @@ nav ul li a {
 #introduction {
   background-color: #c4c4c4;
   padding: 0 1.5rem;
-}
-
-#introduction .container {
   display: flex;
+  align-items: center;
 }
 
 #introduction img {
-  max-width: 50%;
-  max-height: 100%;
+  width: 50%;
+  height: 50%;
   object-fit: contain;
+  margin: 0 1rem;
 }
 
 #introduction .headings {
@@ -121,7 +126,7 @@ nav ul li a {
 }
 
 #introduction .headings h1, #introduction .headings p{
-  margin: 1rem 3rem;
+  margin: 1rem 0;
 }
 
 #introduction .headings p {
@@ -133,9 +138,10 @@ nav ul li a {
 #introduction .headings .button {
   background-color: #333;
   text-align: center;
-  padding: 1rem 12rem;
+  padding: 1rem 1rem;
   font-size: 1.5rem;
-  margin: 2rem 3rem;
+  margin: 1rem 0;
+  max-width: 100%;
 }
 
 #introduction .headings .button a {
@@ -164,7 +170,7 @@ nav ul li a {
 /*quote section*/
 
 #quote-section .image {
-  margin: 4rem;
+  margin: 2rem;
 }
 
 #quote-section .image img {
@@ -172,7 +178,7 @@ nav ul li a {
 }
 
 #quote-section .headings {
-  margin: 0 4rem;
+  margin: 0 2rem;
 }
 
 #quote-section .headings p {
@@ -181,7 +187,6 @@ nav ul li a {
 
 .source {
   font-weight: bold;
-  padding: 1rem;
 }
 
 
@@ -200,6 +205,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 #info-section .info .text h2 {
@@ -211,8 +217,7 @@ nav ul li a {
 }
 
 #info-section .info .image img {
-  width: 80%;
-  height: auto;
+
 }
 
 .info {
@@ -234,36 +239,40 @@ nav ul li a {
 
 #courses-section {
   background-color: #f1f1f1;
-  padding: 4rem 0;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 #courses-section h1 {
   text-align: center;
-  padding: 0;
-  margin-bottom: 3rem;
+  padding: 3rem 0;
+  margin: 0;
 }
 
 #courses {
   display: inline-flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 5rem;
+  justify-content: space-around;
+  margin: 0 2rem;
+  width: 75%
 }
 
 #courses-section .course {
-  margin: 0 1rem;
-  width: 25%;
+  margin: 2rem 1rem;
+  width: 17rem;
 }
 
 #courses-section .course img {
   max-width: 100%;
-  height: auto;
 }
 
 #courses-section .course .course-info {
   background-color: white;
   padding: 1rem;
+  height: 14rem;
 }
 
 #courses-section .course .course-info h2 {
@@ -289,11 +298,13 @@ nav ul li a {
 #thesis-exhibit h1 {
   text-align: center;
   margin: 0;
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 #thesis-exhibit .container {
   display: flex;
+  width: 95%;
+  margin: 0 auto;
 }
 
 #thesis-exhibit .container .left {
@@ -307,7 +318,7 @@ nav ul li a {
   width: 80%;
 }
 
-#left-text p {
+#left-text p, .right .text p {
   line-height: 1.5;
 }
 
@@ -321,7 +332,7 @@ nav ul li a {
 
 
 .right .sub-section img {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 
@@ -329,6 +340,10 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.right .sub-section .text h2 {
+  margin: 0;
 }
 
 #thesis-exhibit .container .left video {
@@ -339,6 +354,14 @@ nav ul li a {
   background-color: #ccc;
 }
 
+#fisma .text {
+  margin: 1rem;
+}
+
+
+#fisma, #now-and-then {
+  width: 100%;
+}
 
 
 /* footer */
@@ -357,4 +380,169 @@ footer {
 
 #copyright {
   margin-left: 2rem;
+}
+
+
+
+/* media queries */
+
+
+
+@media only screen and (max-width: 1240px) {
+  #thesis-exhibit .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #thesis-exhibit .container .left {
+    width: 85%;
+  }
+
+  #thesis-exhibit .container .right {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+
+  #thesis-exhibit .container .sub-section {
+    width: 45%;
+    flex-direction: column;
+  }
+
+  #now-and-then .text {
+    margin: 1rem;
+  }
+
+  #thesis-exhibit .container .right img {
+    height: auto;
+  }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+  #middle-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #info-section, #quote-section {
+    width: 75%;
+    margin-top: 2rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 1032px) {
+  body h1 {
+    font-size: 2rem;
+  }
+
+  #introduction .headings p {
+    font-size: 1.5rem;
+  }
+
+}
+
+
+@media only screen and (max-width: 840px) {
+  #main-heading, header nav {
+    display: none;
+  }
+
+  #header-images {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #header-images img {
+    width: 2rem;
+    height: auto;
+  }
+
+
+  #introduction {
+    flex-direction: column;
+  }
+
+  #introduction .headings {
+    width: 75%;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  #introduction .headings h1 {
+    margin: 0;
+  }
+
+
+  #courses-section #courses {
+    display: none;
+  }
+
+  #courses-section #course-buttons {
+    display: block;
+  }
+
+  #courses-section #course-buttons .course-button a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bolder;
+    font-size: 1.5rem;
+  }
+
+  #course-buttons .course-button {
+    background-color: #ccc;
+    padding: 1.5rem 3rem;
+    margin-bottom: 1rem;
+  }
+
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 0.9rem;
+  }
+
+  footer nav {
+    display: none;
+  }
+
+  #introduction img {
+    width: 100%;
+    margin: 0;
+  }
+
+  #introduction {
+    padding: 0;
+  }
+
+  #quote-section {
+    display: none;
+  }
+
+
+  #info-section {
+    width: 100%;
+  }
+
+  .info {
+    border: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
 }
