@@ -15,7 +15,13 @@ main {
   top: 4rem;
 }
 
+
+
+
 /*header*/
+
+
+
 
 header {
   position: fixed;
@@ -25,6 +31,7 @@ header {
   background-color: white;
   z-index: 2;
   width: 100%;
+  border-bottom: 2px solid black;
 }
 
 #logo img {
@@ -58,12 +65,16 @@ nav {
 
 nav ul {
   padding: 0;
-  margin: auto 0;
+  margin: 0;
 }
 
 ul li {
   display: inline-flex;
-  margin-left: 1rem;
+  padding: 1rem 0.5rem;
+}
+
+ul li:hover {
+  background-color: #ddd;
 }
 
 ul li:first-child {
@@ -73,6 +84,7 @@ ul li:first-child {
 nav ul li a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 
@@ -132,8 +144,217 @@ nav ul li a {
 }
 
 
+
+
+/* middle section */
+
+
+
+#middle-section {
+  display: flex;
+  background-color: #f6f6f6;
+}
+
+#middle-section #quote-section {
+  width: 60%;
+}
+
+
+
+/*quote section*/
+
+#quote-section .image {
+  margin: 4rem;
+}
+
+#quote-section .image img {
+  max-width: 100%;
+}
+
+#quote-section .headings {
+  margin: 0 4rem;
+}
+
+#quote-section .headings p {
+  line-height: 1.5;
+}
+
+.source {
+  font-weight: bold;
+  padding: 1rem;
+}
+
+
+
+/*info section*/
+
+
+
+#info-section {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+
+#info-section .info .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#info-section .info .text h2 {
+  margin: 0.5rem 0;
+}
+
+#info-section .info .image {
+  margin: 1rem;
+}
+
+#info-section .info .image img {
+  width: 80%;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+#info-section .info a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #87ceeb;
+}
+
+
+
+
+/* courses section */
+
+#courses-section {
+  background-color: #f1f1f1;
+  padding: 4rem 0;
+}
+
+
+#courses-section h1 {
+  text-align: center;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+#courses {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 5rem;
+}
+
+#courses-section .course {
+  margin: 0 1rem;
+  width: 25%;
+}
+
+#courses-section .course img {
+  max-width: 100%;
+  height: auto;
+}
+
+#courses-section .course .course-info {
+  background-color: white;
+  padding: 1rem;
+}
+
+#courses-section .course .course-info h2 {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+#courses .course .course-info p {
+  line-height: 1.6;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
 /*thesis exhibit*/
 
-#thesis-exhibit .container .left video {
+#thesis-exhibit {
+  background-color: #f6f6f6;
+}
+
+#thesis-exhibit h1 {
+  text-align: center;
+  margin: 0;
+  padding: 4rem 0;
+}
+
+#thesis-exhibit .container {
+  display: flex;
+}
+
+#thesis-exhibit .container .left {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#left-text {
+  width: 80%;
+}
+
+#left-text p {
+  line-height: 1.5;
+}
+
+#thesis-exhibit .container .right {
+  width: 40%;
+}
+
+#thesis-exhibit .container .right .sub-section {
+  display: inline-flex;
+}
+
+
+.right .sub-section img {
+  padding: 2rem;
+}
+
+
+.right .sub-section .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#thesis-exhibit .container .left video {
+  width: 80%;
+}
+
+#fisma {
+  background-color: #ccc;
+}
+
+
+
+/* footer */
+
+
+
+footer {
+  position: relative;
+  top: 4rem;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+#copyright {
+  margin-left: 2rem;
 }
